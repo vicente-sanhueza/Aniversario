@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amifer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assent/css/styles.css">
+    <link rel="stylesheet" href="./assent/css/musica.css">
+
+    <style>
+        .video-carousel {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .video-carousel video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-wrapper {
+            position: relative;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        .play-button:focus {
+            outline: none;
+        }
+        .carousel-item {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="letra titulo a">Feliz Aniversario</h1>
+        <p class="date titulo"><b>15/07/2023</b> </p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="container">
+                <button id="playButton">Reproducir/Pausar Canción</button>
+                <audio id="audio" src="./assent/audio/maka-el-dinero-no-te-vale_kqzLYn8r.mp3"></audio>
+            </div>
+            <div class="card" style="background-image: url('./assent/img/imagen1.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen2.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen3.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen4.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen5.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen6.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen7.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen8.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen9.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen10.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen11.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen12.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen13.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen14.jpeg');"></div>
+            <div class="card" style="background-image: url('./assent/img/imagen15.jpeg');"></div>
+
+           
+        </div>
+        
+        <div class="letter-container mt-5">
+            <h2 class="titulo2">Mi Carta para Ti</h2>
+            <div class="letter-content">
+                <p>Mi Catita preciosa😍🐛❤️‍🩹</p>
+                <p>
+                    Hola cielo!!, hoy celebramos un año de conocernos😱, lo puedes creer? aún me cuesta asimilarlo jaja. Muchas gracias por todo lo que ha hecho por mí, por cada risa, llanto, viaje🚀, tutito💤, chancheo🐷, y mucho más!!. Pronto celebraremos nuestro aniversario de pololeo y se vienen más sorpresass🤩🤩. Te amo, con todo mi corazón, eres quien quiero que me acompañe el resto de mi vida, con quiero formar un hogar y tener una familia🥹🥹, eres un pilar fundamental en mi vida y siempre le estaré agradecido cielo❤️‍🩹, usted se merece que le baje la luna y quedaría corto🥺, ya que llegaste a sanar a una persona muy rota y desesperanzada, eres y siempre serás mi luz al final del túnel☀️, mi lluvia en la sequía💧, y mi vela en tiempos de oscuridad🕯️.
+                </p>
+
+                <p>
+                Por esto y mucho más, quiero agradecerle todo lo que ha hecho por mi, si  embargo, créame que no me dará la vida para hacerlo, es inconmensurable la gratitud que siento, y espero poder írsela demostrando poco a poco, comenzando por jamás dejarla sola, pase lo que pase siempre podrá contar con mi apoyo, respeto, amor y disposición. Siempre estaré para escucharla y siempre pero siempre puede confiar en mí al 100% para lo que seaaa!!!. Pero espera‼️, esto solo es el comienzo de el maravilloso día que tendremos😉, y todo esto es el comienzo de la vida llena de éxitos y felicidad que viviremos juntos😍🤩.
+                </p>
+                <p>
+                    TE AMO CONSTANZA CATALINA😍 HOY MAÑANA Y SIEMPRE MI UCHUDUS🥹😍❤️‍🩹
+                </p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Carrusel de videos -->
+        <div class="container mt-5 video-carousel">
+            <h2 class="titulo2 text-center">Mejores Momentos</h2>
+            <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="video-wrapper">
+                            <video id="video1" width="600" height="400" controls>
+                                <source src="./assent/videos/video1.mov" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video1')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video id="video2" width="600" height="400" controls>
+                                <source src="./assent/videos/video2.mov" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video2')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item a ">
+                        <div class="video-wrapper">
+                            <video id="video3" width="600" height="400" controls>
+                                <source src="./assent/videos/video3.mov" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video3')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video id="video4" width="600" height="400" controls>
+                                <source src="./assent/videos/video4.mov" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video4')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video id="video5" width="600" height="400" controls>
+                                <source src="./assent/videos/video5.mov" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video5')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video id="video6" width="600" height="400" controls>
+                                <source src="./assent/videos/video6.mov" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video6')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video id="video7" width="600" height="400" controls>
+                                <source src="./assent/videos/video7.mov" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video7')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video id="video8" width="600" height="400" controls>
+                                <source src="./assent/videos/video8.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video8')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video id="video9" width="600" height="400" controls>
+                                <source src="./assent/videos/video9.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video9')">&#9658;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video id="video10" width="600" height="400" controls>
+                                <source src="./assent/videos/video10.mov" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <button class="play-button" onclick="playPause('video10')">&#9658;</button>
+                        </div>
+                    </div>
+            
+                   
+                </div>
+                <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+        
+    </main>
+    <script src="./assent/js/musica.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assent/js/script.js"></script>
+    <script>
+        function playPause(videoId) {
+            var video = document.getElementById(videoId);
+            var button = video.nextElementSibling;
+            if (video.paused) {
+                video.play();
+                button.style.display = 'none';
+            } else {
+                video.pause();
+                button.style.display = 'block';
+            }
+
+            video.onended = function() {
+                button.style.display = 'block';
+            };
+        }
+    </script>
+</body>
+</html>
